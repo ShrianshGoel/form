@@ -2,7 +2,41 @@
 <html>
 <script>
 var s=0;
+var n=0;
+function re(){
 
+n=document.getElementById("s12").value;
+
+
+
+document.getElementById("write").style.fontSize=n+'px';
+document.getElementById("write").style.transition="all 0.4s";
+}
+function songs(){
+if(s>2){
+document.getElementById("Heme").style.opacity='0.0';
+document.getElementById("no").style.opacity='1.0';
+document.getElementById("Music").style.transform='scale(1.4)';
+document.getElementById("head").style.opacity='1.0';
+document.getElementById("Music").style.background='#0f0e2e';
+document.getElementById("Music").src='file:///home/chronos/u-870f62d1894ff89ac8f3744ae033c231a7c518a8/MyFiles/Downloads/ok.png';
+document.getElementById("Music").style.border='3px solid white';
+
+document.getElementById("Music").style.width='20vw';
+document.getElementById("Music").style.height='50vh';
+document.getElementById("Music").style.top='35%';
+document.body.style.background='linear-gradient(90deg,#0f0e2e,#0f0e2e)';
+document.getElementById("Music").style.left='40%';
+document.getElementById("Code").style.opacity='0.0';
+document.getElementById("edi").style.opacity='0.0';
+document.getElementById("Heme").style.cursor='pointer';
+document.getElementById("edi").style.opacity='pointer';
+document.getElementById("Code").style.opacity='pointer';
+document.getElementById("Music").style.cursor='pointer';
+
+document.getElementById("Zoro").style.opacity="0.0";
+}
+}
 
 function move(){
 if(s===2){
@@ -33,6 +67,29 @@ document.getElementById("Heme").style.opacity='1.1';
 document.getElementById("Heme").style.cursor='pointer';
 }
 }
+function edit(){
+document.getElementById("Heme").style.opacity='0.0';
+document.getElementById("s12").style.zIndex='8';
+document.getElementById("s12").style.opacity='1.0';
+document.getElementById("edi").style.transform='scale(1.4)';
+
+document.getElementById("edi").style.top='45%';
+document.body.style.background='linear-gradient(90deg,#2fd494,#20e3e0)';
+document.getElementById("edi").style.left='45%';
+document.getElementById("Code").style.opacity='0.0';
+document.getElementById("Music").style.opacity='0.0';
+document.getElementById("Music").style.display='none';
+document.getElementById("Heme").style.cursor='pointer';
+document.getElementById("edi").style.opacity='pointer';
+document.getElementById("Code").style.opacity='pointer';
+document.getElementById("Music").style.cursor='pointer';
+document.getElementById("write").style.height='70vh';
+document.getElementById("write").style.width='90vw';
+document.getElementById("write").style.opacity="1";
+document.getElementById("write").style.top="25%";
+document.getElementById("Zoro").style.opacity="0.0";
+}
+
 function login(){
 
 ++s;
@@ -48,6 +105,7 @@ document.getElementById("sign").style.left='33%';
 document.getElementById("sign").style.width='36vw';
 document.getElementById("sign").style.background='transparent';
 document.getElementById("sign").innerHTML="Successful (Click to Proceed)";
+
 
 }
 else{
@@ -75,7 +133,7 @@ background:linear-gradient(90deg,#2fd494,#20e3e0);
 z-index:2;
 background:#278a73;
 width:80vh;
-
+transition:1.5s;
 height:96vh;
 border-radius:22px;
 }
@@ -166,7 +224,7 @@ border:4px solid white;
 background:#016363;
 }
 .Editor{
-z-index:5;
+z-index:3;
 width:14vh;
 position:absolute;
 top:20%;
@@ -190,16 +248,14 @@ width:15vh;
 position:absolute;
 top:20%;
 left:35%;
+outline:none;
 opacity:0;
 background-size:cover;
 height:15vh;
 transition:all 1.6s;
-background-color:transparent;
-background-repeat:no-repeat;
-background-image:url('./logo_free-file_adobe_express.svg');
-border-radius:100%;
+border-radius:22px;
 
-border:4px solid white;
+border:4px solid transparent;
 }
 .music:hover{
 transform:rotate(360deg);
@@ -275,6 +331,105 @@ border:2px solid transparent;
 .code:hover{
 transform:rotate(360deg);
 }
+.writer{
+z-index:4;
+background:linear-gradient(90deg,#2fd494,#20e3e0);
+position:absolute;
+font-weight:bold;
+opacity:0;
+color:white;
+
+
+font-size:25px;
+font-family:cursive;
+border-radius:18px;
+width:1vw;
+outline:none;
+transition:all 4.5s;
+height:1vh;
+border:2px solid white;
+}
+.dis{
+
+position:absolute;
+top:27%;
+opacity:0;
+z-index:5;
+font-weight:bold;
+outline:none;
+background-color:white;
+color:black;
+left:44%;
+margin:none;
+height:50px;
+width:190px;
+border-radius:19px;
+border:2px solid rgba(255,255,255,0.17);
+font-size:24px;
+transition:all 2.25s;
+font-family:cursive;
+letter-spacing:1px;
+}
+.note{
+width:17vw;
+height:37vh;
+z-index:5;
+opacity:0;
+background-color:transparent;
+transition:all 2.1s;
+background-size:cover;
+background-repeat:no-repeat;
+background-image:url('https://shrianshgoel.github.io/form/n.png');
+animation-name:ro;
+animation-duration:5.5s;
+animation-iteration-count:infinite;
+position:absolute;
+left:70%;
+top:32%;
+}
+@keyframes ro{
+10%{
+transform:rotate(29deg);
+}
+20%{
+transform:rotate(-19deg);
+}
+30%{
+transform:rotate(-09deg);
+}
+40%{
+transform:rotate(450deg);
+}
+100%{
+
+transform:rotate(0deg);
+
+
+}
+
+}
+
+.k{
+z-index:-1;
+border:2px solid white;
+width:25vw;
+color:white;
+position:absolute;
+top:15%;
+left:6%;
+transition:all 7.5s;
+outline:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+height:7vh;
+opacity:0.0;
+
+background:linear-gradient(45deg,teal,#345580);
+}
+.k::placeholder{
+color:white;
+}
 </style>
 <span id="bg" class="back"></span>
 
@@ -283,10 +438,14 @@ transform:rotate(360deg);
 <h1 style="z-index:3;color:white;letter-spacing:3px;font-family:cursive;font-weight:bold;position:absolute;top:0%;left:11%;opacity:0;transition:all 6.5s;" id="greet">Welcome Back Shriansh</h1>
 
 <input id="pass" class="password" type="password" placeholder="Enter Your Password"></input>
-<button id="sign"  onclick="login();move();" class="log">Log in</button>
+<button id="sign"  onclick="login();move();" class="log">Login</button>
 <span class="theme" id="Heme"></span>
-<span class="Editor" id="edi"></span>
-<span class="music" id="Music"></span>
+<span class="Editor" onclick="edit()" id="edi"></span>
+<img src="./logo_free-file_adobe_express.jpg" class="music" id="Music" onclick="songs()"></img>
 <span id="Zoro" class="zoro"></span>
 <span id="Code" class="code"></span>
+<textarea class="writer" id="write"></textarea>
+<button class="dis" id="head">Music List</button>
+<span class="note" id="no"></span>
+<input type="number" class="k" id="s12" value="22" oninput="re()"></input>
 </html>
