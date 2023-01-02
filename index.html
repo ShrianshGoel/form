@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <script>
 var s=0;
 var n=0;
+var i=0;
 function re(){
 
 n=document.getElementById("s12").value;
@@ -12,6 +14,15 @@ n=document.getElementById("s12").value;
 document.getElementById("write").style.fontSize=n+'px';
 document.getElementById("write").style.transition="all 0.4s";
 }
+function le(){
+
+i=document.getElementById("l12").value;
+
+
+
+document.getElementById("write").style.letterSpacing=i+'px';
+document.getElementById("write").style.transition="all 0.4s";
+}
 function songs(){
 if(s>2){
 document.getElementById("Heme").style.opacity='0.0';
@@ -19,7 +30,7 @@ document.getElementById("no").style.opacity='1.0';
 document.getElementById("Music").style.transform='scale(1.4)';
 document.getElementById("head").style.opacity='1.0';
 document.getElementById("Music").style.background='#0f0e2e';
-document.getElementById("Music").src='file:///home/chronos/u-870f62d1894ff89ac8f3744ae033c231a7c518a8/MyFiles/Downloads/ok.png';
+document.getElementById("Music").style.backgroundImage='none';
 document.getElementById("Music").style.border='3px solid white';
 
 document.getElementById("Music").style.width='20vw';
@@ -71,6 +82,8 @@ function edit(){
 document.getElementById("Heme").style.opacity='0.0';
 document.getElementById("s12").style.zIndex='8';
 document.getElementById("s12").style.opacity='1.0';
+document.getElementById("l12").style.zIndex='8';
+document.getElementById("l12").style.opacity='1.0';
 document.getElementById("edi").style.transform='scale(1.4)';
 
 document.getElementById("edi").style.top='45%';
@@ -233,7 +246,7 @@ background-size:cover;
 height:14vh;
 transition:all 1.6s;
 opacity:0;
-background-image:url('./download.svg');
+background-image:url('./download.png');
 border-radius:22px;
 
 border:2px solid white;
@@ -254,7 +267,7 @@ background-size:cover;
 height:15vh;
 transition:all 1.6s;
 border-radius:22px;
-
+background-image:url('./logo_free-file_adobe_express.jpg');
 border:4px solid transparent;
 }
 .music:hover{
@@ -430,6 +443,27 @@ background:linear-gradient(45deg,teal,#345580);
 .k::placeholder{
 color:white;
 }
+.k1{
+z-index:-1;
+border:2px solid white;
+width:25vw;
+color:white;
+position:absolute;
+top:15%;
+left:34%;
+transition:all 7.5s;
+outline:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+height:7vh;
+opacity:0.0;
+
+background:linear-gradient(45deg,#b80932,#f70757);
+}
+.k1::placeholder{
+color:white;
+}
 </style>
 <span id="bg" class="back"></span>
 
@@ -441,11 +475,12 @@ color:white;
 <button id="sign"  onclick="login();move();" class="log">Login</button>
 <span class="theme" id="Heme"></span>
 <span class="Editor" onclick="edit()" id="edi"></span>
-<img src="./logo_free-file_adobe_express.jpg" class="music" id="Music" onclick="songs()"></img>
+<span src="./logo_free-file_adobe_express.jpg" class="music" id="Music" onclick="songs()"></span>
 <span id="Zoro" class="zoro"></span>
 <span id="Code" class="code"></span>
 <textarea class="writer" id="write"></textarea>
 <button class="dis" id="head">Music List</button>
 <span class="note" id="no"></span>
 <input type="number" class="k" id="s12" value="22" oninput="re()"></input>
+<input type="number" class="k1" id="l12" value="1" oninput="le()"></input>
 </html>
